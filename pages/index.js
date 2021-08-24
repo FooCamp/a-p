@@ -1,6 +1,7 @@
 import getPageData from '../utils/api';
 import BigImageLayout from '../components/layouts/BigImageLayout';
 import LastProjects from '../components/sections/LastProjects';
+import JoinUs from '../components/sections/JoinUs';
 import { HOME } from '../constants/pagenames';
 
 export const getServerSideProps = async () => {
@@ -16,6 +17,7 @@ export const getServerSideProps = async () => {
 
 export default function Recipes({ components }) {
   const projectSection = components.find((component) => component.sys.contentType.sys.id === 'projectsSection');
+  const joinUsSection = components.find((component) => component.sys.contentType.sys.id === 'joinUsSection');
 
   return (
     <div className="home">
@@ -28,6 +30,14 @@ export default function Recipes({ components }) {
           data={projectSection.fields}
         />
       </LastProjects>
+
+      <JoinUs>
+        <BigImageLayout
+          contentType="simple"
+          variation="blue-background"
+          data={joinUsSection.fields}
+        />
+      </JoinUs>
     </div>
   );
 }
