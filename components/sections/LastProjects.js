@@ -12,6 +12,7 @@ export default function LastProjects({ children, data }) {
         <h2 className="last-projects__title">
           { layoutData.title }
         </h2>
+        {console.log(layoutData.categories)}
         <div className="last-projects__categories">
           { layoutData.categories.map(({
             sys: { id },
