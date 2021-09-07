@@ -25,14 +25,11 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 22px;
     margin-bottom: 30px;
-    overflow: hidden;
-    max-height: 1220px;
 
     @media (min-width: $bp-md) {
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 40px 37px;
       margin-bottom: 38px;
-      max-height: 452px;
     }
 
     &__card {
