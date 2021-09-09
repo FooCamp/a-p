@@ -39,6 +39,10 @@
 
   &-title {
     @include heading-1();
+
+    @media (min-width: $bp-md) {
+      max-width: 213px;
+    }
   }
 
   &-subtitle {
